@@ -1,0 +1,91 @@
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family:Helvetica, sans-serif;
+    }
+
+
+    .main {
+        width: 100%;
+        height: 100vh;
+        background-color: aqua;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .wrapper {
+        width: 40%;
+        border: 1px solid black;
+        padding: 30px;
+    }
+
+    .heading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 10px;
+        text-align: center;
+    }
+
+    .heading h1 {
+        color: red;
+        font-size: 2.5rem;
+    }
+
+    .input-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .val-1 {
+        display: flex;
+        justify-content: flex-start;
+        align-items:flex-start;
+        flex-direction:column;
+        width: 100%;
+        gap: 6px;
+    }
+
+    .val-1 input {
+        width: 100%;
+        padding: 16px 0px;
+        border-radius: 8px;
+        border: none;
+    }
+
+    input::placeholder {
+        padding-left: 10px;
+    }
+
+    .sub-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 0px;
+    }
+
+    .sub-btn button {
+        padding: 10px 40px;
+        border-radius: 8px;
+        border: none;
+        background-color: red;
+        color: white;
+    }
+
+    .nerror, .Eerror, .perror {
+        color: red;
+        font-weight: bold;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .hid{
+        display: none;
+    }

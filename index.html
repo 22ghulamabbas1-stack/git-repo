@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+<body>
+        <div class="main">
+            <div class="wrapper">
+                <div class="heading">
+                    <h1>Form</h1>
+                </div>
+                <div class="input-list">
+                    <div class="val-1">
+                    <label for="name">Full Name</label>
+                    <input type="text" placeholder="Name" required id="name">
+                    <a href="" class="icon hide"><i class="fa-solid fa-check"></i></a>
+                    <span class="nerror"></span>
+                    </div>
+                    <div class="val-1">
+                    <label for="name">Email</label>
+                    <input type="text" placeholder="Email" required id="email">
+                    <span class="Eerror"></span>
+                    </div>
+                    <div class="val-1">
+                    <label for="name">Password</label>
+                    <input type="password" placeholder="Password" required id="password">
+                    <a href="" class="icon2 hid"><i class="fa-solid fa-check"></i></a>
+                    <span class="perror"></span>
+                    </div>
+                </div>
+                <div class="sub-btn">
+                    <button class="btn">Sumbit Form</button>
+                </div>
+            </div>
+        </div>
+    <script>
+        // error
+        let errorN = document.querySelector(".nerror");
+        let eError = document.querySelector(".Eerror");
+        let perror = document.querySelector(".perror");
+        let icon = document.querySelector(".icon");
+         let iconP = document.querySelector(".icon2");
+        // error end
+        let btn = document.querySelector(".btn");
+        let name = document.querySelector("#name");
+        let email = document.querySelector("#email");
+        let password = document.querySelector("#password");
+
+        btn.addEventListener("click",(e)=> {
+            e.preventDefault();
+
+            // name condition
+            
+            if (name.value === "" || name.value === null) {
+                errorN.innerHTML = "Write your Full Name";
+            } else {
+                let nameEr = /^([A-Za-z0-9_\-\.])+\@([A-za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+            if (name.value.match != nameEr) {
+                icon.classList.remove("hide");
+            } 
+        };
+
+        // email condition
+
+             if (email.value === "" || email.value === null) {
+                eError.innerHTML = "Write your Email";
+            }
+
+
+            // password condition
+
+             if (password.value === "" || password.value === null) {
+                perror.innerHTML = "Write your Password";
+            } else {
+                 if (password.value.length <= 5) {
+                perror.innerHTML = "Password Must be More than 6 Character";
+            } else {
+                if (password.value.length >= 6) {
+                    iconP.classList.remove("hid"); 
+                }
+            }
+
+            }
+        
+            // condition change
+
+            // name condition
+        
+        });
+
+       
+
+
+
+
+
+    
+        let its = [
+            [5],
+            [6],
+            [7],
+            [8],
+            [9],
+            [10],
+            [11],
+            [12],
+            [13],
+            [14],
+            [15],
+        ];
+
+
+      
+
+    </script>
+</body>
+    <script href="index.js"></script>
+</html>
